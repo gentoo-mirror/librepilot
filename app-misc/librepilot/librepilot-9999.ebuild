@@ -30,13 +30,13 @@ RDEPEND="
    		sci-libs/gdal
    		sci-libs/geos )
    	x11-libs/libX11
-   	>dev-qt/qtcore-5.71:5
-   	>dev-qt/qtgui-5.71:5
-   	>dev-qt/qtopengl-5.71:5
-   	>dev-qt/qtserialport-5.71:5
-	>dev-qt/qtdeclarative-5.71:5
-	>dev-qt/qtwebkit-5.71:5
-	>dev-qt/qtprintsupport05.71:5
+   	dev-qt/qtcore:5
+   	dev-qt/qtgui:5
+   	dev-qt/qtopengl:5
+   	dev-qt/qtserialport:5
+	dev-qt/qtdeclarative:5
+	dev-qt/qtwebkit:5
+	dev-qt/qtprintsupport:5
 	doc? (
    		app-doc/doxygen )
    	"
