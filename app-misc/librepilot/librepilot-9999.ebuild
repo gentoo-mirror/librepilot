@@ -30,11 +30,14 @@ RDEPEND="
    		sci-libs/gdal
    		sci-libs/geos )
    	x11-libs/libX11
-   	dev-qt/qtcore:5
-   	dev-qt/qtgui:5
-   	dev-qt/qtopengl:5
-   	dev-qt/qtserialport
-   	doc? (
+   	>dev-qt/qtcore-5.71:5
+   	>dev-qt/qtgui-5.71:5
+   	>dev-qt/qtopengl-5.71:5
+   	>dev-qt/qtserialport-5.71:5
+	>dev-qt/qtdeclarative-5.71:5
+	>dev-qt/qtwebkit-5.71:5
+	>dev-qt/qtprintsupport05.71:5
+	doc? (
    		app-doc/doxygen )
    	"
 
@@ -76,12 +79,15 @@ src_compile() {
     # crossdev
     
     make arm_sdk_install && QT_SELECT=5 make all
+
+	# TODO:: Add building of the doc files
 }
 
 
 src_install() {
     emake DESTDIR="${D}" install
 	doenvd ${FILESDIR}/99librepilot
+	# TODO:: Add installation of the doc files
 }
 
 pkg_postinst() {
